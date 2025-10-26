@@ -1,0 +1,21 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+    int totalMoney(int n) {
+        int weeks = n / 7;
+        int days = n % 7;
+
+        int total = (28 * weeks) + (7 * (weeks * (weeks - 1)) / 2);
+
+        for (int i = 1; i <= days; i++) {
+            total += (weeks + i);
+        }
+
+        return total;
+    }
+   
+
+int solve(){int n; cin>>n;return totalMoney( n) ;}
+int main(){
+   int p= solve();cout<<p<<endl;
+}
